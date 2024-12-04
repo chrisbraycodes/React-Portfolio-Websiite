@@ -22,12 +22,7 @@ const ProjectCard = styled.div`
     }
 `;
 
-const Title = styled.h2`
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: ${({ theme }) => theme.text};
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-`;
+
 
 const ProjectImage = styled.img`
     width: 100%;

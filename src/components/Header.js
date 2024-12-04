@@ -29,13 +29,20 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  background: ${({ theme }) => theme.bodySide};  // Dark background for the icon box
+  padding: 0.5rem 1rem;  // Space around icons
+  border-radius: 10px;  // Rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  // Optional subtle shadow for depth
 `;
 
 const IconLink = styled.a`
   font-size: 1.5rem;
+  color: ${({ theme }) => theme.text};  // Color of icons based on theme
   transition: transform 0.3s ease;
+
   &:hover {
     transform: scale(1.2);
+    color: ${({ theme }) => theme.linkHover};  // Change color on hover
   }
 `;
 
@@ -53,7 +60,6 @@ const ThemeToggle = styled.button`
         color: ${({ theme }) => theme.body};
     }
 `;
-
 
 const HamburgerButton = styled.button`
   border: none;
