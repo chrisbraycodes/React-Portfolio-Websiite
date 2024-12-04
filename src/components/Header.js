@@ -7,7 +7,13 @@ import { lightTheme, darkTheme } from '../theme';
 // Animation for header background
 const fibonacciLight = keyframes`
   0% { background-position: 50% 50%; }
-  100% { background-position: 50% 50%; }
+    8.1% { background-position: 30% 70%; }
+    19.9% { background-position: 60% 30%; }
+    33.7% { background-position: 20% 20%; }
+    54.6% { background-position: 80% 80%; }
+    67.4% { background-position: 40% 10%; }
+    83.1% { background-position: 10% 40%; }
+    100% { background-position: 50% 50%; }
 `;
 
 const HeaderContainer = styled.header`
@@ -16,9 +22,11 @@ const HeaderContainer = styled.header`
   align-items: center;
   padding: 1rem 2rem;
   background: radial-gradient(circle, #ffffff 10%, transparent 70%);
+  background-size: 200% 200%;
   animation: ${fibonacciLight} 120s infinite ease-in-out;
   position: relative;
   width: 100%;  // Ensure the container uses full width
+
 
   @media (max-width: 768px) {
     flex-direction: row;  // Keep layout as row for mobile
@@ -27,6 +35,14 @@ const HeaderContainer = styled.header`
     width: 100%;  // Make sure it's full width
   }
 `;
+
+
+
+
+
+
+
+
 
 const Logo = styled.div`
   font-size: 1.5rem;
@@ -135,7 +151,9 @@ const Header = () => {
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
       <HeaderContainer>
+      <IconContainer>
         <Logo>Christopher's React Portfolio</Logo>
+        </IconContainer>
         <IconContainer>
           <IconLink href="https://github.com/chrisbraycodes" target="_blank" rel="noopener noreferrer">
             <FaGithub />
