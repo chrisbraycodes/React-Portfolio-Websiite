@@ -6,10 +6,10 @@ const ProjectCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: ${({ theme }) => theme.body};
+    background: theme.body;
     width: 250px;
     padding: 1rem;
-    border: 1px solid ${({ theme }) => theme.border};
+    border: 1px solid theme.border;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -22,6 +22,13 @@ const ProjectCard = styled.div`
     }
 `;
 
+const Title = styled.h2`
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: ${({ theme }) => theme.text};
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+`;
+
 const ProjectImage = styled.img`
     width: 100%;
     height: 150px;
@@ -32,7 +39,7 @@ const ProjectImage = styled.img`
 
 const ProjectTitle = styled.h3`
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.text};
+    color: theme.text;
     margin: 0.5rem 0;
     text-align: center;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); // Shadow for better readability
@@ -40,7 +47,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
     font-size: 0.9rem;
-    color: ${({ theme }) => theme.text};
+    color: theme.text;
     line-height: 1.5;
     text-align: center;
     margin-bottom: 1rem;
@@ -53,8 +60,8 @@ const ProjectLinkButton = styled.button`
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     font-weight: bold;
-    color: ${({ theme }) => theme.body};
-    background: ${({ theme }) => theme.linkHover};
+    color: theme.body;
+    background: theme.linkHover;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -62,8 +69,8 @@ const ProjectLinkButton = styled.button`
     transition: background 0.3s ease, transform 0.2s ease-in-out;
 
     &:hover {
-        background: ${({ theme }) => theme.text};
-        color: ${({ theme }) => theme.body};
+        background: theme.text;
+        color: theme.body;
         transform: scale(1.1);
     }
 

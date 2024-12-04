@@ -9,20 +9,15 @@ import Skills from './components/Skills';
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        // Check localStorage for saved theme preference, default to night mode
         const savedMode = localStorage.getItem('isDarkMode');
         return savedMode === null ? true : savedMode === 'true';
     });
 
     useEffect(() => {
-        // Save the theme preference to localStorage whenever it changes
         localStorage.setItem('isDarkMode', isDarkMode);
     }, [isDarkMode]);
 
-    const toggleTheme = () => {
-        setIsDarkMode((prevMode) => !prevMode);
-    };
-
+    const toggleTheme = () => setIsDarkMode((prev) => !prev);
     const currentTheme = isDarkMode ? darkTheme : lightTheme;
 
     return (

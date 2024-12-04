@@ -40,13 +40,20 @@ const IconLink = styled.a`
 `;
 
 const ThemeToggle = styled.button`
-  border: none;
-  background: ${({ theme }) => theme.bodySide};
-  color: ${({ theme }) => theme.text};
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+    background: ${({ theme }) => theme.bodySide};
+    color: ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }) => theme.border};
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: ${({ theme }) => theme.linkHover};
+        color: ${({ theme }) => theme.body};
+    }
 `;
+
 
 const HamburgerButton = styled.button`
   border: none;

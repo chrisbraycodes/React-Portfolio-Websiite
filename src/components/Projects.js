@@ -17,9 +17,10 @@ const Section = styled.section`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: ${({ theme }) => theme.text};
+           font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: theme.text;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
         text-align: center;
     }
 `;

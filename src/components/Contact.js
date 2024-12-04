@@ -7,9 +7,9 @@ import emailjs from 'emailjs-com';
 const Section = styled(motion.section)`
     margin-bottom: 4rem;
     padding: 2rem;
-    border: 1px solid ${({ theme }) => theme.border};
+    border: 1px solid them.border;
     border-radius: 8px;
-    background: ${({ theme }) => theme.background};
+    background: theme.background;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -28,27 +28,27 @@ const Form = styled.form`
     textarea {
         width: 100%;
         padding: 0.8rem;
-        border: 1px solid ${({ theme }) => theme.border};
+        border: 1px solid theme.border;
         border-radius: 5px;
         font-size: 1rem;
-        background: ${({ theme }) => theme.body};
-        color: ${({ theme }) => theme.text};
+        background: theme.body;
+        color: theme.text;
     }
 
     button {
         padding: 0.8rem;
         font-size: 1rem;
         font-weight: bold;
-        background: ${({ theme }) => theme.linkHover};
-        color: ${({ theme }) => theme.body};
+        background: theme.linkHover;
+        color: theme.body;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background 0.3s ease;
 
         &:hover {
-            background: ${({ theme }) => theme.text};
-            color: ${({ theme }) => theme.body};
+            background: theme.text;
+            color: theme.body;
         }
     }
 `;
