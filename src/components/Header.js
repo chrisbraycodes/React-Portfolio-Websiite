@@ -18,11 +18,20 @@ const HeaderContainer = styled.header`
   background: radial-gradient(circle, #ffffff 10%, transparent 70%);
   animation: ${fibonacciLight} 120s infinite ease-in-out;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;  // Stack logo and icons vertically on mobile
+    align-items: center;     // Center content horizontally
+  }
 `;
 
 const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;  // Add space between logo and icon box on mobile
+  }
 `;
 
 const IconContainer = styled.div`
@@ -33,6 +42,12 @@ const IconContainer = styled.div`
   padding: 0.5rem 1rem;  // Space around icons
   border-radius: 10px;  // Rounded corners
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  // Optional subtle shadow for depth
+  margin-top: 1rem;  // Lower the box slightly
+
+  @media (max-width: 768px) {
+    margin-top: 0;  // Remove margin-top on mobile
+    padding: 0.5rem; // Adjust padding for smaller screens
+  }
 `;
 
 const IconLink = styled.a`
