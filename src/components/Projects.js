@@ -21,6 +21,7 @@ const Section = styled.section`
         margin-bottom: 1rem;
         color: ${({ theme }) => theme.text};
         text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for visibility */
     }
 `;
 
