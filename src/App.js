@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { About, Projects, Contact } from './components/Sections';
 import Skills from './components/Skills';
-import RootLayout from './components/Analytics';
+import RootLayout from './components/Analytics.tsx';
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
