@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { About, Projects, Contact } from './components/Sections';
 import Skills from './components/Skills';
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
