@@ -46,7 +46,7 @@ const Projects = () => {
             imageSrc: '/infoRom small.jpg', // Image for the project card
         },
         {
-            title: 'Portfolio Website',
+            title: 'Portfolio Website using React',
             description: `This portfolio site showcases my coding journey and the projects 
             I’ve worked on. Built with React and styled-components, it's fully responsive and 
             features interactive elements.`,
@@ -54,7 +54,7 @@ const Projects = () => {
             imageSrc: '/React Portfolio Small.jpg', // Image for the project card
         },
         {
-            title: 'React Native, iOS/Android/web Instagram Clone "instClone"',
+            title: 'React Native, iOS/Android/web Instagram Clone "instaClone"',
             description: `The instaClone project was a personal challenge to
              master cross-platform development. Here, I not only developed but
               also managed the project from inception, learning the nuances of
