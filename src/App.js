@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { About, Projects, Contact } from './components/Sections';
 import Skills from './components/Skills';
-import { Analytics } from "@vercel/analytics/react"
+import RootLayout from './components/Analytics';
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -22,17 +22,19 @@ const App = () => {
     const currentTheme = isDarkMode ? darkTheme : lightTheme;
 
     return (
-        <ThemeProvider theme={currentTheme}>
-            <GlobalStyles />
-            <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-            <main>
-                <About />
-                <Skills />
-                <Projects />
-                <Contact />
-            </main>
-            <Footer />
-        </ThemeProvider>
+        <RootLayout>
+            <ThemeProvider theme={currentTheme}>
+                <GlobalStyles />
+                <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+                <main>
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <Contact />
+                </main>
+                <Footer />
+            </ThemeProvider>
+        </RootLayout>
     );
 };
 
