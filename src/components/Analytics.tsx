@@ -1,6 +1,7 @@
 import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
 
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
@@ -9,5 +10,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         </>
     );
 };
+
+
 
 export default RootLayout;
