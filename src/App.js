@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import { About, Projects, Contact } from './components/Sections';
 import Skills from './components/Skills';
 import RootLayout from './components/Analytics.tsx';
-import LocationInfo from './components/LocationInfo'; // Import the LocationInfo component
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -24,18 +23,18 @@ const App = () => {
 
     return (
         <RootLayout>
-            <ThemeProvider theme={currentTheme}>
-                <GlobalStyles />
-                <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-                <main>
-                    <About />
-                    <Skills />
-                    <Projects />
-                    <Contact />
-                    <LocationInfo /> {/* Add the LocationInfo component here */}
-                </main>
-                <Footer />
-            </ThemeProvider>
+                <ThemeProvider theme={currentTheme}>
+                    <GlobalStyles />
+                    <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+                    <main>
+                        <About />
+                        <Skills />
+                        <Projects />
+                        <Contact />
+                    </main>
+                    <Footer />
+                </ThemeProvider>
+            
         </RootLayout>
     );
 };
